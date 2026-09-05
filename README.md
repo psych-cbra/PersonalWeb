@@ -1,6 +1,8 @@
 # Personal Portfolio
 
-A single-page personal portfolio site — a dark, glassmorphic layout presenting my background, projects, experience, hobbies, and contact details as one continuous scroll.
+A single-page personal portfolio site.
+
+A dark, glassmorphic layout presenting my background, projects, experience, hobbies, and contact details as one continuous scroll.
 
 The page is a flat stack of sections rendered by `App.jsx`, with a fixed navbar overlaying it. There is no router: navigation is anchor links that smooth-scroll to each section.
 
