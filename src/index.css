@@ -21,9 +21,15 @@
 
   --color-highlight: #f5a623;
   --color-surface: #1a2329;
+
+  --animate-border-spin: border-spin 4s linear infinite;
 }
+
 @layer base {
-  html {scroll-behavior: smooth;}
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
@@ -35,8 +41,8 @@
   }
 }
 
-@layer components{
-  .glass{
+@layer components {
+  .glass {
 
     background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
     backdrop-filter: blur(16px);
@@ -44,7 +50,7 @@
 
   }
 
-    .glass-strong{
+  .glass-strong {
 
     background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
     backdrop-filter: blur(24px);
@@ -54,47 +60,88 @@
 }
 
 /* Animations */
-@layer utilities { 
+@layer utilities {
   @keyframes fade-in {
     from {
       opacity: 0;
       transform: translateY(20px);
       filter: blur(6px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
       filter: blur(0);
     }
   }
+
   .animate-fade-in {
     animation: fade-in 0.5s ease-out both;
-  
+
+  }
+
+  @keyframes border-spin {
+    to {
+      stroke-dashoffset: -220;
+    }
   }
 }
 
 @layer slow-drift {
   @keyframes slow-drift {
+
     0%,
-    100%{
+    100% {
       transform: translate(0, 0);
       opacity: 0.6;
     }
+
     25% {
       transform: translate(20px, -30px);
       opacity: 1;
     }
+
     50% {
       transform: translate(-15px, -20px);
       opacity: 0.3;
     }
+
     75% {
       transform: translate(10px, 15px);
       opacity: 0.8;
     }
 
   }
-  .animate-slow-drift {
-    animation: slow-drift 5s ease-in-out infinite;
+
+  .animate-fade-in {
+    animation-delay: fade-in 0.8s ease-out both;
+  }
+
+  .delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .delay-800 {
+    animation-delay: 800ms;
   }
 }
