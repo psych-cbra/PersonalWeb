@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react"; // Import the Menu icon from lucide-reac
 import { useState } from "react";
 const navlinks = [
     { href: "#about", label: "About" },
+    { href: "#hero", label: "Hero" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
     { href: "#hobbies", label: "Hobbies" },
@@ -12,7 +13,7 @@ const navlinks = [
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State to track the mobile menu open/close status
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-transparent py-5">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-transparent py-2">
             <nav className="container mx-auto flex items-center justify-between">
                 <a href="#"
                     className="text-xl font-bold tracking-tight hover:text-primary"
