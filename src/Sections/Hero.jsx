@@ -1,6 +1,25 @@
 import { Button } from "@/Components/Button";
 import { ArrowRight } from "lucide-react";
 import { AnimatedBorderButton } from "@/Components/Animatedborderbutton.jsx";
+import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+
+const skills = [
+  "Linux",
+  "Pure-1",
+  "FlashArray",
+  "FlashBlade",
+  "AI prompting",
+  "ServiceNow",
+  "Customer Service",
+  "SalesForce",
+  "Software development",
+  "React",
+  "GitHub Actions",
+  "Tailwind CSS",
+  "+2 years of experience in technical support",
+
+];
+
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -52,24 +71,76 @@ export const Hero = () => {
             </div>
             <div className="flex flex-wrap gap-4">
 
-              <Button size="lg" className="animate-fade-in delay-400">
+              <Button size="lg" className="animate-fade-in delay-600">
                 Contact Me <ArrowRight className="w-4 h-4" />
               </Button>
               <AnimatedBorderButton />
             </div>
+            {/* Links */}
+            <div className="flex items-center gap-4 animate-fade-in delay-800">
+              <span className="text-muted-foreground text-sm">Follow: </span>
+              {[{ icon: FaGithub, href: "https://github.com/psych-cbra" },
+              { icon: FaLinkedin, href: "https://www.linkedin.com/in/ignacio-paucar-1312a8156/" }]
+                .map((social, idx) => (
+                  <a
+                    key={idx}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground transition-colors duration-300 hover:text-primary"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+            </div>
           </div>
           {/*Right Column*/}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-72 h-72 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 rounded-full bg-primary opacity-20 blur-3xl scale-110" />
+          <div className="relative animate-fade-in animation-delay-300">
+            {/*Profile Image*/}
+            <div className="relative mx-auto w-72 aspect-2/3 lg:w-96">
+              <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-purple/40 via-transparent to-purple/40 blur-sm animate-pulse-glow" />
               <img
                 src="/Pictures/purejob.jpeg"
-                alt="Profile"
-                className="relative w-full h-full object-cover rounded-2xl delay-500 animate-fade-in mask-[radial-gradient(ellipse_at_center,black_55%,transparent_100%)]"
-              />
+                alt="Ignacio Paucar"
+                className="w-full h-full object-cover rounded-2xl border border-purple/30 shadow-lg shadow-purple/30 animate-fade-in delay-400" />
+              {/*Floating Badge*/}
+              <div className="absolute -bottom-6 sm:-bottom-10 lg:-bottom-1 -right-4 glass rounded-xl px-4 py-3 animate-float">
+                <div className="flex items-center gap-3">
+                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
+                  <span className="text-sm font-medium">
+                    Available for work
+                  </span>
+                </div>
+              </div>
+              {/*Status Badge*/}
+              <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
+                <div className="text-2xl font-bold text-primary">+4</div>
+                <div className="text-sm font-medium text-muted-foreground">Years Exp.</div>
+              </div>
             </div>
           </div>
         </div>
+
+        {/*Skills Section*/}
+        <div className="mt-24 sm:mt-20 space-y-12 animate-fade-in delay-800">
+          <p className="text-center text-sm uppercase tracking-widest text-muted-foreground">
+            Technologies I work with
+          </p>
+          <div className="relative overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+            <div className="flex w-max gap-3 sm:gap-4 animate-marquee">
+              {[...skills, ...skills].map((skill, idx) => (
+                // Duplicate the skills array to create a continuous loop, Curly brackets to use Javascript
+                <span
+                  key={idx}
+                  className="glass whitespace-nowrap rounded-full px-3 py-1.5 text-xs sm:px-4 sm:py-2 sm:text-sm text-muted-foreground"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
