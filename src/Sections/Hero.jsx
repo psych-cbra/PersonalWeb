@@ -1,5 +1,5 @@
 import { Button } from "@/Components/Button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { AnimatedBorderButton } from "@/Components/Animatedborderbutton.jsx";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
@@ -60,13 +60,13 @@ export const Hero = () => {
             {/*Heading and paragraph*/}
             <div className="space-y-4">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in delay-200">
-                This is a simple webpage<web-page></web-page>,
-                <span className="text-primary"> created by the great Ignacio Paucar.</span>
+                This is a simple Web-page<web-page></web-page>,
+                <span className="text-primary"> created by Ignacio Paucar.</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg animate-fade-in delay-800">
-                I'm a junior software engineer, currently seeking a position where I can apply my skills and contribute to the development of innovative software solutions.
-                With more than 2 years of experience in support and customer service, I have developed strong problem-solving abilities and a keen attention to detail.
-                I am passionate about technologyand continuously learning new technologies to enhance my expertise in the field.
+                I'm a junior software engineer, currently seeking a position where I can apply my skills and contribute.
+                With more than 4 years of experience in support and customer service, I have developed strong problem-solving abilities and a keen attention to detail.
+                I am passionate about technology and continuously learning new technologies to enhance my expertise in the field.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -123,7 +123,7 @@ export const Hero = () => {
 
         {/*Skills Section*/}
         <div className="mt-24 sm:mt-20 space-y-12 animate-fade-in delay-800">
-          <p className="text-center text-sm uppercase tracking-widest text-muted-foreground">
+          <p className="text-center text-md tracking-widest text-muted-foreground">
             Technologies I work with
           </p>
           <div className="relative overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
@@ -140,7 +140,17 @@ export const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
 
+      {/*Scroll Indicator - pinned to the section's own bottom edge, not the centered content*/}
+      <div className="absolute bottom-1 inset-x-0 flex justify-center animate-fade-in delay-800">
+        <a
+          href="#about"
+          className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors group"
+        >
+          <span className="text-xs uppercase tracking-wider">Scroll</span>
+          <ChevronDown className="w-6 h-6 animate-bounce" />
+        </a>
       </div>
     </section>
   );

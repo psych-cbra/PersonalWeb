@@ -1,6 +1,6 @@
 import { Button } from "@/Components/Button";
 import { Menu, X } from "lucide-react"; // Import the Menu icon from lucide-react
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const navlinks = [
     { href: "#about", label: "About" },
     { href: "#hero", label: "Hero" },
@@ -12,8 +12,20 @@ const navlinks = [
 ];
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State to track the mobile menu open/close status
+ const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-transparent py-2">
+        <header className={`fixed top-0 left-0 right-0 z-50 py-2 transition-colors duration-300 ${isScrolled ? "glass" : "bg-transparent"}`}>
             <nav className="container mx-auto flex items-center justify-between">
                 <a href="#"
                     className="text-xl font-bold tracking-tight hover:text-primary"
