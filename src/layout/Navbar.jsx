@@ -2,8 +2,8 @@ import { Button } from "@/Components/Button";
 import { Menu, X } from "lucide-react"; // Import the Menu icon from lucide-react
 import { useEffect, useState } from "react";
 const navlinks = [
+    { href: "#hero", label: "Main" },
     { href: "#about", label: "About" },
-    { href: "#hero", label: "Hero" },
     { href: "#projects", label: "Projects" },
     { href: "#experience", label: "Experience" },
     { href: "#contact", label: "Contact" },
@@ -11,17 +11,17 @@ const navlinks = [
 ];
 export const Navbar = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State to track the mobile menu open/close status
- const [isScrolled, setIsScrolled] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
 
-    window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
         <header className={`fixed top-0 left-0 right-0 z-50 py-2 transition-colors duration-300 ${isScrolled ? "glass" : "bg-transparent"}`}>
@@ -47,7 +47,7 @@ export const Navbar = () => {
                 </div>
                 {/*CTA Button */}
                 <div className="hidden md:block">
-                    <Button size="sm">Contact Me</Button>{/*This is where the Button component, that we can re-used, it species the classes and how the button looks like, and we can use it in other parts of the app.*/}
+                    <Button size="sm" onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}>Contact Me</Button>{/*This is where the Button component, that we can re-used, it species the classes and how the button looks like, and we can use it in other parts of the app.*/}
                 </div>
 
                 {/*Mobile Menu Button */}
@@ -73,7 +73,14 @@ export const Navbar = () => {
                                 {link.label}
                             </a>
                         ))}
-                        <Button>Contact Me</Button>
+                        <Button
+                            onClick={() => {
+                                setIsMobileMenuOpen(false);
+                                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+                            }}
+                        >
+                            Contact Me
+                        </Button>
                     </div>
                 </div>
             )}

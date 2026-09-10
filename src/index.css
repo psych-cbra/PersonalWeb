@@ -24,6 +24,7 @@
   --color-purple: #c084fc;
 
   --animate-border-spin: border-spin 4s linear infinite;
+  --animate-border-travel: border-travel 12s linear infinite;
   --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
 }
 
@@ -132,6 +133,13 @@
   @keyframes border-spin {
     to {
       stroke-dashoffset: -220;
+    }
+  }
+
+  /*Dedicated to the Contact form card's border (strokeDasharray 60 800, total 860) - offset matches that pattern length exactly for a seamless loop, unlike reusing border-spin which is tuned to AnimatedBorderButton's shape.*/
+  @keyframes border-travel {
+    to {
+      stroke-dashoffset: -860;
     }
   }
 

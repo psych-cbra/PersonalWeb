@@ -13,7 +13,7 @@ const experience = [
     period: "2021 — 2022",
     description:
       "Efficiently managed a high volume of incoming customer calls, providing specialized technical assistance for iDrive OS to effectively resolve vehicle-related malfunctions. Concurrently identified and troubleshot mechanical issues, ensuring the prompt resolution of problems to prevent potential vehicle breakdowns while maintaining overall operational efficiency and excellent customer service.",
-    tags: ["Customer Service", "Multi-tasking"],
+    tags: ["Customer Service", "Multi-tasking", "Communication Skills"],
   },
 
   {
@@ -34,7 +34,7 @@ const experience = [
     description:
       "I specialize in managing and optimizing Pure Storage FlashArray and FlashBlade systems to deliver reliable, secure and high-performing SAN environments. My responsibilities include proactive health checks, continuous monitoring, non-disruptive upgrades, and security patching. As part of Pure1 TSE team, I assisted customers with SafeMode configurations, MFA setup, user-to-role mapping and support for non SSO accounts. I guide customers on data deletion and eradication processes, helping them understand retention behavior and security related configurations. I combine technical expertise with AI-driven tools to troubleshoot issues efficiently and improve overall operational performance \n \n As an additional responsibility, I served as a Backup Team Lead stepping in to cover TL duties when needed. I monitored team backlog and case assignments to help prevent SLA misses, ensured compliance expectations were being met, provided feedback to team members, mentored peers on best practices and professional development, conducted weekly QA reviews whenever the TL was unavailable",
       
-    tags: ["SAN", "Linux", "SafeMode"],
+    tags: ["Storage Area Network (SAN)", "Pure1-SafeMode", "Linux"],
   },
 
 ];
@@ -68,10 +68,7 @@ export const Experience = () => {
             Experience
           </span>
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-secondary-foreground">
-            Where I've{" "}
-            <span className="font-serif italic font-normal text-foreground">
-              grown
-            </span>
+            Professional Experience
           </h2>
         </div>
 

@@ -11,7 +11,7 @@ const skills = [
   "AI prompting",
   "ServiceNow",
   "Customer Service",
-  "SalesForce",
+  "SFDC",
   "Software development",
   "React",
   "GitHub Actions",
@@ -22,7 +22,7 @@ const skills = [
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden">
 
       {/*Background purple dots*/}
       <div className="absolute inset-0">
@@ -65,13 +65,17 @@ export const Hero = () => {
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg animate-fade-in delay-800">
                 I'm a junior software engineer, currently seeking a position where I can apply my skills and contribute.
-                With more than 4 years of experience in support and customer service, I have developed strong problem-solving abilities and a keen attention to detail.
+                With more than 4 years of experience in tech support and customer service, I have developed strong problem-solving abilities and a need attention to detail.
                 I am passionate about technology and continuously learning new technologies to enhance my expertise in the field.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
 
-              <Button size="lg" className="animate-fade-in delay-600">
+              <Button
+                size="lg"
+                className="animate-fade-in delay-600"
+                onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+              >
                 Contact Me <ArrowRight className="w-4 h-4" />
               </Button>
               <AnimatedBorderButton />
@@ -100,7 +104,7 @@ export const Hero = () => {
             <div className="relative mx-auto w-72 aspect-2/3 lg:w-96">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-purple/40 via-transparent to-purple/40 blur-sm animate-pulse-glow" />
               <img
-                src="/Pictures/purejob.jpeg"
+                src="/Pictures/AIpic.png"
                 alt="Ignacio Paucar"
                 className="w-full h-full object-cover rounded-2xl border border-purple/30 shadow-lg shadow-purple/30 animate-fade-in delay-400" />
               {/*Floating Badge*/}

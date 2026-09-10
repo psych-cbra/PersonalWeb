@@ -3,17 +3,17 @@ import { Code2, Lightbulb, GlobeLock, Users, GraduationCap } from "lucide-react"
 
 const highlights = [
 
-    {
+  {
     icon: GraduationCap,
     title: "Self-taught",
     description:
       "Constantly learning new tools and technologies driven by curiosity rather than obligation.",
+
   },
   {
-    icon: Code2,
-    title: "Clean Code",
-    description:
-      "Writing readable, well-structured code that's easy to maintain and scale.",
+    icon: Users,
+    title: "Collaboration",
+    description: "Communicating clearly with cross-functional teams to solve problems and deliver results.",
   },
   {
     icon: GlobeLock,
@@ -21,11 +21,14 @@ const highlights = [
     description:
       "Experience hardening enterprise storage systems and applying security best practices in production environments.",
   },
+
   {
-    icon: Users,
-    title: "Collaboration",
-    description: "Communicating clearly with cross-functional teams to solve problems and deliver results.",
+    icon: Code2,
+    title: "Clean Code",
+    description:
+      "Writing readable, well-structured code that's easy to maintain and scale.",
   },
+
 ];
 
 export const About = () => {
@@ -44,7 +47,7 @@ export const About = () => {
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
               Anything worth doing,
-              <span className="font-serif italic font-normal text-foreground">
+              <span className="text-4xl md:text-5xl font-bold font-serif italic text-foreground">
                 {" "}
                 is worth doing right.
               </span>
