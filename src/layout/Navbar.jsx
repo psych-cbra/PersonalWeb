@@ -30,7 +30,7 @@ export const Navbar = () => {
                 <a href="#"
                     className="text-xl font-bold tracking-tight hover:text-primary"
                 >
-                    PM<span className="text-primary">.</span>
+                    IP<span className="text-primary">.</span>
                 </a>
 
                 {/*Desktop Nav */}
