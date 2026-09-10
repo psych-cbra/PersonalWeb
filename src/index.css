@@ -60,6 +60,52 @@
 
   }
 
+  /*Same ambient-dot backdrop as Hero's background, but no picture underneath — just the fade overlay + drifting dots.*/
+  .particle-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+      to bottom,
+      color-mix(in srgb, var(--color-background) 20%, transparent) 0%,
+      color-mix(in srgb, var(--color-background) 25%, transparent) 300%,
+      var(--color-background) 80%
+    );
+  }
+
+  .particle-dot {
+    position: absolute;
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 9999px;
+    opacity: 0.15;
+  }
+
+}
+
+/*Dedicated to .particle-dot only, so Hero's slow-drift dots are unaffected — faster cycle, deeper fade (Experience section).*/ 
+@layer particle-fade {
+  @keyframes particle-fade {
+    0%,
+    100% {
+      transform: translate(0, 0);
+      opacity: 0.5;
+    }
+
+    25% {
+      transform: translate(20px, -30px);
+      opacity: 0.4;
+    }
+
+    50% {
+      transform: translate(-15px, -20px);
+      opacity: 0.3;
+    }
+
+    75% {
+      transform: translate(10px, 15px);
+      opacity: 0.3;
+    }
+  }
 }
 
 /* Animations */
