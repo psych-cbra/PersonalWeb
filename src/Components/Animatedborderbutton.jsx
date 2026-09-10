@@ -2,7 +2,10 @@ import { Download } from "lucide-react";
 
 export const AnimatedBorderButton = () => {
     return (
-        <button className="group relative inline-flex h-14 items-center gap-2 rounded-full px-8 text-lg font-medium text-foreground/90 cursor-pointer transition-colors duration-300 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background animate-fade-in delay-600">
+        <a
+            href="/Pictures/CV/IgnacioPaucarCV09102026.pdf"
+            download="Ignacio-Paucar-CV.pdf"
+            className="group relative inline-flex h-14 items-center gap-2 rounded-full px-8 text-lg font-medium text-foreground/90 cursor-pointer transition-colors duration-300 hover:text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background animate-fade-in delay-600">
             {/*Animated SVG border: hidden at rest, fades in with a rotating dashed pulse on hover*/}
             <svg
                 className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
@@ -24,6 +27,6 @@ export const AnimatedBorderButton = () => {
             <span className="relative z-10">
                 Download CV</span>
             <Download className="relative z-10 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
+        </a>
     );
 };
