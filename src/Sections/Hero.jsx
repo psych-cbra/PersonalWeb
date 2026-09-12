@@ -5,21 +5,17 @@ import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const skills = [
   "Linux",
-  "SafeMode-Pure1",
+  "Pure1 SafeMode",
   "FlashArray",
   "FlashBlade",
   "ServiceNow",
   "SFDC",
-  "AI prompting",
-  "Git",
+  "Attention to details",
+  "Critical thinking",
+  "Software development",
   "React",
   "GitHub Actions",
   "Tailwind CSS",
-  "Oracle(beginner)",
-  "Python(beginner)" ,
-  "Customer Service",
-  "Software development",
-  "Case Managment"
 ];
 
 export const Hero = () => {
