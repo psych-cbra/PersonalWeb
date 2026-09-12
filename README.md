@@ -1,16 +1,12 @@
 # Personal Portfolio
 
-A single-page personal portfolio site.
-
-A dark, glassmorphic layout presenting my background, upcoming projects, experience, and a way to get in touch, as one continuous scroll.
-
-The page is a flat stack of sections rendered by `App.jsx`, with a fixed navbar overlaying it and a footer beneath it. There is no router: navigation is anchor links that smooth-scroll to each section.
+A single-page personal portfolio site, the page is a flat stack of sections rendered by `App.jsx`, with a fixed navbar overlaying it and a footer beneath it. There is no router,  navigation is anchor links that smooth-scroll to each section.
 
 ## Sections
 
 | Section | What it shows |
 | --- | --- |
-| Hero | Intro, tagline, CTA buttons, and a marquee of technologies |
+| Hero or Main | Intro, tagline, CTA buttons, and a marquee of technologies |
 | About | Background summary and a grid of highlights |
 | Projects | Placeholder "coming soon" card — real project write-ups land here later |
 | Experience | A timeline of roles, each with its own accent color |
@@ -83,4 +79,4 @@ The site will be deployed to [**Vercel**](https://vercel.com), which suits this 
 - **Free tier and a global CDN** — enough for a static portfolio, with fast loads worldwide and HTTPS handled automatically.
 - **Custom domain** — a personal domain can be attached once the site is live.
 
-Planned steps: push the repository to GitHub, import it into Vercel, add the EmailJS environment variables in the Vercel project settings, confirm the detected build settings, and deploy.
+Planned steps: push the repository to GitHub, import it into Vercel, add the EmailJS environment variables in the Vercel project settings, confirm the detected build settings and deploy.

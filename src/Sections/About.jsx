@@ -24,7 +24,7 @@ const highlights = [
 
   {
     icon: Code2,
-    title: "Clean Code",
+    title: "Code",
     description:
       "Writing readable, well-structured code that's easy to maintain and scale.",
   },
@@ -46,25 +46,20 @@ export const About = () => {
             </div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Anything worth doing,
-              <span className="text-4xl md:text-5xl font-bold font-serif italic text-foreground">
-                {" "}
-                is worth doing right.
-              </span>
+              Anything worth doing, is worth doing right.
             </h2>
 
             <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
               <p>
                 I'm a Computer Science student in my final year with professional experience
                 in technical support and enterprise technology, my journey has combined
-                hands-on IT experience with software development, giving me a strong
+                hands-on IT experience with software development giving me a strong
                 understanding of both how systems work and how software is built.
               </p>
 
               <p>
                 I have experience supporting enterprise storage environments, troubleshooting
-                complex technical issues.
-                I enjoy solving problems, learning new technologies and turning
+                complex technical issues, I enjoy solving problems, learning new technologies and turning
                 technical challenges into practical solutions.
               </p>
 

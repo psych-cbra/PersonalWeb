@@ -5,19 +5,21 @@ import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 
 const skills = [
   "Linux",
-  "Pure-1",
+  "SafeMode-Pure1",
   "FlashArray",
   "FlashBlade",
-  "AI prompting",
   "ServiceNow",
-  "Customer Service",
   "SFDC",
-  "Software development",
+  "AI prompting",
+  "Git",
   "React",
   "GitHub Actions",
   "Tailwind CSS",
-  "+2 years of experience in technical support",
-
+  "Oracle(beginner)",
+  "Python(beginner)" ,
+  "Customer Service",
+  "Software development",
+  "Case Managment"
 ];
 
 export const Hero = () => {
@@ -64,9 +66,9 @@ export const Hero = () => {
                 <span className="text-primary"> created by Ignacio Paucar.</span>
               </h1>
               <p className="text-muted-foreground text-lg leading-relaxed max-w-lg animate-fade-in delay-800">
-                I'm a junior software engineer, currently seeking a position where I can apply my skills and contribute.
-                With more than 4 years of experience in tech support and customer service, I have developed strong problem-solving abilities and a need attention to detail.
-                I am passionate about technology and continuously learning new technologies to enhance my expertise in the field.
+                I'm a junior software engineer with more than 4 years of experience in technology support and customer service.
+                Throughout my career, I've developed strong problem-solving skills, technical knowledge and a commitment to delivering reliable solutions.
+                I'm now looking to build on that experience by taking on greater technical responsibilities, contributing at a higher level, and continuing to grow within the organization.
               </p>
             </div>
             <div className="flex flex-wrap gap-4">
@@ -104,7 +106,7 @@ export const Hero = () => {
             <div className="relative mx-auto w-72 aspect-2/3 lg:w-96">
               <div className="absolute inset-0 rounded-3xl bg-linear-to-br from-purple/40 via-transparent to-purple/40 blur-sm animate-pulse-glow" />
               <img
-                src="/Pictures/AIpic.png"
+                src="/Pictures/AIme.jpeg"
                 alt="Ignacio Paucar"
                 className="w-full h-full object-cover rounded-2xl border border-purple/30 shadow-lg shadow-purple/30 animate-fade-in delay-400" />
               {/*Floating Badge*/}
@@ -128,7 +130,7 @@ export const Hero = () => {
         {/*Skills Section*/}
         <div className="mt-24 sm:mt-20 space-y-12 animate-fade-in delay-800">
           <p className="text-center text-md tracking-widest text-muted-foreground">
-            Technologies I work with
+            Technologies and skills
           </p>
           <div className="relative overflow-hidden mask-[linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
             <div className="flex w-max gap-3 sm:gap-4 animate-marquee">
