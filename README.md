@@ -6,7 +6,7 @@ A single-page personal portfolio site, the page is a flat stack of sections rend
 
 | Section | What it shows |
 | --- | --- |
-| Hero or Main | Intro, tagline, CTA buttons, and a marquee of technologies |
+| Hero | Intro, tagline, CTA buttons, and a marquee of technologies |
 | About | Background summary and a grid of highlights |
 | Projects | Placeholder "coming soon" card — real project write-ups land here later |
 | Experience | A timeline of roles, each with its own accent color |
